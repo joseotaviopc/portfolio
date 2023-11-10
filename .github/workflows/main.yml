@@ -29,19 +29,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        # uses: actions/checkout@v3
-        uses: oven-sh/setup-bun@v1
-      # - name: Set up Node
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: 18
+        uses: actions/checkout@v3
+        # uses: oven-sh/setup-bun@v1
+        # with:
+        #   bun-version: latest
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
       #     cache: 'npm'
+      - name: GitHub Action for Yarn
+        uses: Borales/actions-yarn@v4.2.0
       - name: Install dependencies
         # run: npm install
-        run: bun install
+        run: yarn
+        # run: bun install
         # run: bun index.ts
       - name: Build
-        run: bun run build
+        # run: bun run build
+        run: yarn build
         # run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3
