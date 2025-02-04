@@ -1,6 +1,18 @@
-import { Bookmark, FileText, PenTool, User } from "lucide-react";
+import {
+  Bookmark,
+  Briefcase,
+  FileText,
+  GraduationCap,
+  Hammer,
+  PenTool,
+  User,
+} from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 export default function Hero() {
   return (
@@ -14,8 +26,8 @@ export default function Hero() {
           </h1>
 
           <p className="text-2xl  leading-relaxed max-w-xl">
-            One of my deepest joys comes from equipping creative people with the
-            visual tools they need to further their work.
+            Habilidades técnicas avançadas em desenvolvimento mobile, frontend e
+            backend, experiência prática em projetos complexos.
           </p>
 
           <div className="flex items-center gap-4">
@@ -28,64 +40,130 @@ export default function Hero() {
             />
             <div className="">
               <div className="font-medium">MOBILE DEVELOPER</div>
-              <div className="text-sm">FULLSTACK DEVELOPER</div>
+              {/* <div className="text-sm">FULLSTACK DEVELOPER</div> */}
             </div>
           </div>
         </div>
 
         <div className="space-y-6">
           <h2 className="text-sm uppercase tracking-wider  mb-8">
-            WHERE YOU CAN START
+            Destaques
           </h2>
-          <nav className="space-y-6">
-            <Link
-              href="#about"
-              className="flex items-center gap-4 transition-colors group"
-            >
-              <div className="bg-secondary/90 p-2 rounded">
-                <User className="w-5 h-5" />
-              </div>
-              <span className="text-lg group-hover:underline">
-                Learn fun facts about me
-              </span>
-            </Link>
-
-            <Link
-              href="#work"
-              className="flex items-center gap-4 transition-colors group"
-            >
-              <div className="bg-secondary/90 p-2 rounded">
-                <FileText className="w-5 h-5" />
-              </div>
-              <span className="text-lg group-hover:underline">
-                Browse my work history
-              </span>
-            </Link>
-
-            <Link
-              href="#case-study"
-              className="flex items-center gap-4 transition-colors group"
-            >
-              <div className="bg-secondary/90 p-2 rounded">
-                <Bookmark className="w-5 h-5" />
-              </div>
-              <span className="text-lg group-hover:underline">
-                Read a featured case study
-              </span>
-            </Link>
-
-            <Link
-              href="#blog"
-              className="flex items-center gap-4 transition-colors group"
-            >
-              <div className="bg-secondary/90 p-2 rounded">
-                <PenTool className="w-5 h-5" />
-              </div>
-              <span className="text-lg group-hover:underline">
-                Read a recent blog
-              </span>
-            </Link>
-          </nav>
+          <div className="flex flex-col space-y-4">
+            <HoverCard>
+              <HoverCardTrigger className="cursor-default flex gap-2 items-center">
+                <div className="bg-secondary/90 p-2 rounded">
+                  <Hammer className="w-5 h-5" />
+                </div>
+                Competências
+              </HoverCardTrigger>
+              <HoverCardContent
+                className="w-[30rem] text-primary space-y-2"
+                align="start"
+              >
+                <p className="text-sm">
+                  <span className="font-bold">Frontend:</span>{" "}
+                  React, Typescript, React Native, Next.js, Styled Components,
+                  Tailwind, Radix-Ui, Material Ui.
+                </p>
+                <p className="text-sm">
+                  <span className="font-bold">Backend:</span> Node.js, GraphQL.
+                </p>
+                <p className="text-sm">
+                  <span className="font-bold">Banco de Dados:</span>{" "}
+                  SQL, MongoDB.
+                </p>
+                <p className="text-sm">
+                  <span className="font-bold">Outras Linguagens:</span>{" "}
+                  Flutter, Python, Java.
+                </p>
+                <p className="text-sm">
+                  <span className="font-bold">Ferramentas e Tecnologias:</span>
+                  {" "}
+                  Firebase, Intercom, geolocalização, testes unitários e
+                  end-to-end, exportação de dados (pdf, csv, xls), gráficos.
+                </p>
+              </HoverCardContent>
+            </HoverCard>
+            <HoverCard>
+              <HoverCardTrigger className="cursor-default flex gap-2 items-center">
+                <div className="bg-secondary/90 p-2 rounded">
+                  <GraduationCap className="w-5 h-5" />
+                </div>
+                Formação Acadêmica
+              </HoverCardTrigger>
+              <HoverCardContent
+                className="w-[30rem] text-primary"
+                align="start"
+              >
+                <p className="text-sm font-bold">
+                  {`Let's Code (11/2021 - 11/2022)`}
+                </p>
+                <p className="text-sm mb-2">
+                  Web Full-Stack Degree, focado em React e Node.js.
+                </p>
+                <p className="text-sm font-bold">
+                  {`Let's Code (09/2021 - 10/2021)`}
+                </p>
+                <p className="text-sm mb-2">Coding Tank, curso de Python.</p>
+                <p className="text-sm font-bold">
+                  Pontifícia Universidade Católica do Rio de Janeiro (2008 -
+                  2009)
+                </p>
+                <p className="text-sm mb-2">
+                  Especialização em Engenharia de Tubulações.
+                </p>
+                <p className="text-sm font-bold">
+                  Universidade Federal Fluminense (1997 - 2003)
+                </p>
+                <p className="text-sm">Graduação em Engenharia Mecânica.</p>
+              </HoverCardContent>
+            </HoverCard>
+            <HoverCard>
+              <HoverCardTrigger className="cursor-default flex gap-2 items-center">
+                <div className="bg-secondary/90 p-2 rounded">
+                  <Briefcase className="w-5 h-5" />
+                </div>
+                Experiência
+              </HoverCardTrigger>
+              <HoverCardContent
+                className="w-[30rem] text-primary"
+                align="start"
+              >
+                <p className="text-sm font-bold">
+                  MusicPro, Desenvolvedor Frontend (09/2022 - 01/2025)
+                </p>
+                <p className="text-sm mb-2">
+                  Migração de um app de distribuição de músicas para React
+                  Native, focando nas telas de financeiro e analytics. Recriação
+                  do fluxo de publicação de músicas, incluindo testes unitários
+                  e end-to-end. Publicação do app nas lojas Google e Apple;
+                  implementação de notificações push, login social, integração
+                  com Firebase, chat via Intercom e geolocalização.
+                  Desenvolvimento de features para um marketplace WEB3, com foco
+                  em checkout de pagamento via PIX e cartão de crédito.
+                </p>
+                <p className="text-sm font-bold">
+                  Paipe.co, Desenvolvedor Frontend (Março a Setembro de 2022)
+                </p>
+                <p className="text-sm mb-2">
+                  Desenvolvimento de uma aplicação de registro de horas usando
+                  React, Typescript, Styled Components, Radix-Ui, React Hook
+                  Form, Yup. Adição de funcionalidades de cadastro, exportação
+                  em pdf, csv e xls, gráficos e correções de bugs em um
+                  dashboard de gerenciamento de fluxo de pagamento usando React,
+                  Styled Components, Material Ui.
+                </p>
+                <p className="text-sm font-bold">
+                  Flux Uniformes, Gerente Financeiro (2018 - 2022)
+                </p>
+                <p className="text-sm">
+                  Responsável pelo controle financeiro e administrativo; contas
+                  a pagar e a receber; fechamentos mensais e trimestrais de DRE.
+                </p>
+              </HoverCardContent>
+            </HoverCard>
+          </div>
         </div>
       </div>
     </section>
