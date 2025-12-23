@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "My Portfolio",
   description: "A showcase of my work",
   verification: {
-    google: "Utnw_suhgEeT2IOrAYoKjBAWHe0OTylH7jIJhSoyg6I",
+    google: "z4I_S9ZAClOQZzFu4JhYBbVOfhDi_y7_DXEb0K0lIp8",
   },
 };
 
